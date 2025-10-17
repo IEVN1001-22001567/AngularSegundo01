@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { OperacionesDistancia } from './distanciaoperaciones';
+import { RouterLink } from '@angular/router';
+import { initFlowbite } from 'flowbite';
 
 @Component({
   selector: 'app-distancia',
-  imports: [FormsModule, ReactiveFormsModule],
+  imports: [FormsModule, ReactiveFormsModule,RouterLink],
   templateUrl: './distancia.component.html',
   styleUrl: './distancia.component.css'
 })
@@ -16,6 +18,7 @@ export class DistanciaComponent {
    constructor() {}
 
   ngOnInit(): void {
+    initFlowbite();
     this.formulario = new FormGroup({
       x1: new FormControl(''),
       y1: new FormControl(''),

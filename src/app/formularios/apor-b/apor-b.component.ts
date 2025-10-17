@@ -2,10 +2,11 @@ import { Component } from '@angular/core';
 import { FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Multiplica } from './multiplica';
 import { initFlowbite } from 'flowbite';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-apor-b',
-  imports: [FormsModule, ReactiveFormsModule],
+  imports: [FormsModule, ReactiveFormsModule, RouterLink],
   templateUrl: './apor-b.component.html',
   styleUrl: './apor-b.component.css'
 })
